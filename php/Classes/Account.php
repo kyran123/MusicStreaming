@@ -18,6 +18,20 @@
             $this->validateEmail($email);
             //Check if Password is correct
             $this->validatePassword($password);
+
+            if(empty($this->errorArray)){
+                //TODO: Insert into DB
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function getError($error) {
+            if(!in_array($error, $this->errorArray)){
+                $error = "";
+            }
+            return "<span class='errorMessage'>$error</span>";
         }
 
         private function validateUsername($username){

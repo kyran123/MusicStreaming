@@ -1,5 +1,5 @@
 <?php
-    include_once("../Classes/Account.php");
+    include_once("PHP/Classes/Account.php");
     include_once("PHP/Handlers/register-handler.php");
     include_once("PHP/Handlers/register-handler.php");
 ?>

@@ -1,5 +1,4 @@
 <?php
-    include_once("../Classes/Account.php");
 
     function sanitizeForm($inputText, $bool) {
         $inputText = strip_tags($inputText);
@@ -26,8 +25,15 @@
             //get and clean PASSWORD variable
             $password = sanitizeForm($_POST['registerPassword'], false);
 
+            //Create new Account class object
             $account = new Account();
-            $account->register($username, $firstName, $lastName, $email, $password);
+            //Call register function and store result
+            $result = $account->register($username, $firstName, $lastName, $email, $password);
+
+            if($result){
+                //Take to index page
+                header("Location: index.php");
+            }
         }
     }
 ?>
