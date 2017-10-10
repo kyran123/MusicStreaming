@@ -1,4 +1,5 @@
 <?php
+    include_once("../Classes/Account.php");
 
     function sanitizeForm($inputText, $bool) {
         $inputText = strip_tags($inputText);
@@ -11,8 +12,8 @@
 
     if(isset($_POST['registerButton'])){
         if(
-            $_POST['registerEmail'] === $_POST['registerEmailConfirm'] ||
-            $_POST['registerPassword'] === $_POST['registerPasswordConfirm']
+            $_POST['registerEmail'] == $_POST['registerEmailConfirm'] ||
+            $_POST['registerPassword'] == $_POST['registerPasswordConfirm']
         ){
             //Get and clean USERNAME variable
             $username = sanitizeForm($_POST['registerUsername'], false);
@@ -24,6 +25,9 @@
             $email = sanitizeForm($_POST['registerEmail'], false);
             //get and clean PASSWORD variable
             $password = sanitizeForm($_POST['registerPassword'], false);
+
+            $account = new Account();
+            $account->register($username, $firstName, $lastName, $email, $password);
         }
     }
 ?>

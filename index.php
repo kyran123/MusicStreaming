@@ -1,6 +1,7 @@
 <?php
-    include_once("PHP/register-handler.php");
-    include_once("PHP/register-handler.php");
+    include_once("../Classes/Account.php");
+    include_once("PHP/Handlers/register-handler.php");
+    include_once("PHP/Handlers/register-handler.php");
 ?>
 
 <!DOCTYPE html>
