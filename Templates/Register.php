@@ -1,8 +1,8 @@
 <div id="registerContainer">
-    <form id="loginForm" action="PHP/Handlers/login-handler.php" method="POST">
+    <form id="loginForm" action="../PHP/Handlers/login-handler.php" method="POST">
         <h2>Login to your account:</h2>
         <p>
-            <?php echo $Account->getError("Your username must be between 5 and 25 characters!"); ?>
+            <?php echo $account->getError("Your username must be between 5 and 25 characters!"); ?>
             <label for="loginUsername">Username: </label>
             <input id="loginUsername" name="loginUsername" type="text" placeholder="Username" required />
         </p>
@@ -15,7 +15,7 @@
     </form>
 
 
-    <form id="registerForm" action="PHP/Handlers/register-handler.php" method="POST">
+    <form id="registerForm" action="../PHP/Handlers/register-handler.php" method="POST">
         <h2>Create your free account:</h2>
         <p>
             <label for="registerUsername">Username: </label>
