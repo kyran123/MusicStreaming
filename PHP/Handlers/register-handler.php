@@ -32,7 +32,8 @@
 
         if($result){
             //Take to index page
-            header("Location: ./../index.php");
+            $_SESSION['user'] = $username;
+            header("Location: index.php");
         } else {
             echo "error!";
         }
