@@ -1,5 +1,8 @@
 <?php
     include("PHP/Classes/Account.php");
+    include("PHP/Classes/Constants.php");
+    //Create new Account Class object
+    $account = new Account();
     include("PHP/Handlers/register-handler.php");
     include("PHP/Handlers/login-handler.php");
 ?>
