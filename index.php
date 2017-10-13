@@ -25,20 +25,43 @@
     }
 
     if(isset($_SESSION['user'])){
-       $userLoggedIn = $_SESSION['user'];
-    } else {
-        //Pop up Register / login pop up!
+        setcookie("userLoggedIn", $_SESSION['user'], time() + 60);
+        $_COOKIE['userLoggedIn'] = $_SESSION['user'];
+        $userLoggedIn = $_SESSION['user'];
     }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Kyrans Music Player</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<body>
-    <?php include("Templates/Register.php"); ?>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Kyrans Music Player</title>
+
+        <link rel="stylesheet" type="text/css" href="Style/Register.css">
+        <link rel="stylesheet" type="text/css" href="Style/Theme.css">
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="JS/Includes/js.cookie.js"></script>
+    </head>
+    <body>
+        <?php include("Templates/Register.php"); ?>
+    </body>
+    <script>
+        $(document).ready(function(){
+            if(Cookies.get("userLoggedIn").length > 4){
+                document.querySelector("#focusContainer").style.display = "none";
+                Cookies.remove("userLoggedIn");
+            }
+        });
+
+        function showLoginForm(){
+            document.querySelector("#loginForm").style.display = "block";
+            document.querySelector("#registerForm").style.display = "none";
+        }
+
+        function showRegisterForm() {
+            document.querySelector("#loginForm").style.display = "none";
+            document.querySelector("#registerForm").style.display = "block";
+        }
+    </script>
 </html>

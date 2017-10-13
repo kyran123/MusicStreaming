@@ -1,0 +1,50 @@
+/*
+ * Imports
+ */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Laila');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic');
+
+body {
+    position: fixed;
+    top: 0px !important;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+button {
+    font-family: 'Laila', cursive;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px #fff;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 7px #fff;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"]
+{
+    display: block;
+    background-color: transparent;
+    font-family: 'Laila', cursive;
+    width: 60%;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    margin: auto;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    color: white;
+}

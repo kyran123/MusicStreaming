@@ -1,0 +1,60 @@
+#focusContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(33, 33, 33, 0.8);
+    z-index: 9000;
+}
+
+#registerContainer {
+    background-image: url('../Assets/Images/rpWallpaperDark.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    width: 80vw;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000;
+    padding: 20px;
+    z-index: 9001;
+}
+
+#registerContainer label {
+    font-family: 'Laila', cursive;
+    font-size: 18px;
+}
+
+#loginForm,
+#registerForm
+{
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#loginForm h2,
+#registerForm h2
+{
+    font-family: 'Indie Flower', cursive;
+    font-size: 32px;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+#loginForm a,
+#registerForm a
+{
+    font-weight: bold;
+    color: lightblue;
+}
+
+#loginForm a:hover,
+#registerForm a:hover
+{
+    cursor: pointer;
+}
