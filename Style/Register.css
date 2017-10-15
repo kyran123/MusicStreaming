@@ -1,9 +1,47 @@
+#AdView {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#AdView h2 {
+    font-size: 48px !important;
+    font-family: 'laila', cursive !important;
+    color: #991633;
+}
+
+#AdView ul {
+    font-family: 'laila', cursive !important;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#AdView li {
+    list-style-type: none;
+}
+
+#AdView li:before {
+    color: #991633;
+    font-size: 32px;
+    margin-right: 15px;
+    content: '✓';
+}
+
 #focusContainer {
+    display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: rgba(33, 33, 33, 0.8);
     z-index: 9000;
+}
+
+.errorMessage {
+    font-family: 'Laila', cursive;
+    font-size: 18px;
+    color: red;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    display: block;
 }
 
 #registerContainer {
@@ -26,6 +64,7 @@
 #registerContainer label {
     font-family: 'Laila', cursive;
     font-size: 18px;
+
 }
 
 #loginForm,
@@ -42,8 +81,10 @@
 #registerForm h2
 {
     font-family: 'Indie Flower', cursive;
-    font-size: 32px;
+    font-size: 36px;
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 #loginForm a,

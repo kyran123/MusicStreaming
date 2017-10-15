@@ -11,8 +11,6 @@
         if($result) {
             $_SESSION['user'] = $username;
             header("location: index.php");
-        } else {
-            echo "error";
         }
     }
 

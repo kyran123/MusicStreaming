@@ -34,8 +34,6 @@
             //Take to index page
             $_SESSION['user'] = $username;
             header("Location: index.php");
-        } else {
-            echo "error!";
         }
     }
 ?>

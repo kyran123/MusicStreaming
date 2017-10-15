@@ -1,11 +1,11 @@
 <div id="focusContainer">
     <div id="registerContainer">
-        <form id="loginForm" action="index.php" method="POST">
+        <form id="loginForm" action="index.php" method="POST" style="display:none;">
             <h2>Login to your account:</h2>
             <p>
                 <?php echo $account->getError(Constants::$loginFailed); ?>
                 <label for="loginUsername">Username: </label>
-                <input id="loginUsername" name="loginUsername" type="text" required />
+                <input id="loginUsername" name="loginUsername" type="text" value="<?php getInputValue('loginUsername'); ?>" required />
             </p>
             <p>
                 <label for="loginPassword">Password: </label>
@@ -14,6 +14,15 @@
 
             <button type="submit" name="loginButton">Login</button>
             <p>Don't have an account yet? Click <a onclick="showRegisterForm()">here</a></p>
+
+            <div id="AdView">
+                <h2>Get great music, right now</h2>
+                <ul>
+                    <li>Discover music you'll fall in love with</li>
+                    <li>Create your own playlists</li>
+                    <li>Follow artists to keep up to date</li>
+                </ul>
+            </div>
         </form>
 
 

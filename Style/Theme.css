@@ -5,6 +5,15 @@
 @import url('https://fonts.googleapis.com/css?family=Laila');
 @import url('https://fonts.googleapis.com/css?family=Gentium+Basic');
 
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-56 { font-size: 56px; }
+.material-icons.md-64 { font-size: 64px; }
+.material-icons.md-72 { font-size: 72px; }
+
+/*
+ * Elements
+ */
 body {
     position: fixed;
     top: 0px !important;
@@ -18,10 +27,12 @@ button {
     font-family: 'Laila', cursive;
     background-color: transparent;
     color: white;
+    line-height: 30px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
     border-radius: 5px;
     border: 1px solid #fff;
     box-shadow: 0 0 2px #fff;
@@ -47,4 +58,12 @@ input[type="email"]
     border: 0;
     border-bottom: 1px solid #fff;
     color: white;
+}
+
+* {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
