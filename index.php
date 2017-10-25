@@ -12,7 +12,7 @@
     if(isset($_POST['registerButton'])){
         global $account;
         if(empty($account)){
-            $account = new Account();
+            $account = new Account($con);
         }
         checkRegistration($account);
     }
@@ -45,8 +45,12 @@
         <script type="text/javascript" src="JS/Includes/js.cookie.js"></script>
     </head>
     <body>
-        <?php include("Templates/Register.php"); ?>
-        <?php include("Templates/Footer.php"); ?>
+        <div id="mainContainer">
+            <?php include("Templates/Menu.php"); ?>
+            <?php include("Templates/Content.php"); ?>
+            <?php include("Templates/Register.php"); ?>
+            <?php include("Templates/Footer.php"); ?>
+        </div>
     </body>
     <script src="JS/Interaction.js" defer></script>
 </html>

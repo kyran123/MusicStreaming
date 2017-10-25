@@ -69,6 +69,7 @@
 #nowPlayingRight {
     width: 30%;
     min-width: 60px;
+    margin-top: 30px;
 }
 
 #nowPlayingRight .material-icons {
@@ -76,17 +77,27 @@
     width: 36px;
 }
 
-#volumeBar {
-    position: absolute;
-    width: 180px;
-    right: 0;
+#volume {
+    float: left;
+    margin-right: 5px;
 }
 
-#volumeBar .progressBar,
-#volumeBar .progressBarBackground
-{
-    width: 125px !important;
+#volumeBar {
+    position: absolute;
+    width: 220px;
+    right: 10px;
+    max-height: 6px;
+}
+
+#volumeBar .progressBarBackground {
+    max-height: 6px;
+}
+
+.volumeBar {
+    float: left;
+    width: 165px !important;
     height: 6px !important;
+    margin-top: 14px;
 }
 
 

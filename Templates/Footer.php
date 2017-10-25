@@ -48,10 +48,11 @@
         </div>
 
         <div id="nowPlayingRight">
-            <div class="volumeBar">
+            <div id="volumeBar">
                 <div id="volume" class="material-icons md-36">volume_up</div>
+                <!--<div id="volume" class="material-icons">volume_off</div>-->
 
-                <div class="progressBar">
+                <div class="progressBar volumeBar">
 
                     <div class="progressBarBackground">
                         <div class="progress"></div>
